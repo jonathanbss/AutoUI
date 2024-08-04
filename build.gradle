@@ -1,0 +1,37 @@
+plugins {
+	id 'java-library'
+	id 'com.vaadin' version '24.4.6'
+	id 'eclipse'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/']
+        }
+        resources {
+            srcDirs = ['src/resources']
+        }
+    }
+}
+
+base.archivesName = 'AutoUI'
+group = 'de.jonathan.boss.autoui'
+
+repositories {
+	mavenCentral()
+	maven {
+	 	url "https://maven.vaadin.com/vaadin-addons"
+ 	}
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    withJavadocJar()
+    withSourcesJar()
+}
+
+dependencies {
+	api 'com.vaadin:vaadin-core:24.4.6'
+}
+
