@@ -43,3 +43,11 @@ sourcesJar {
 dependencies {
 	api 'com.vaadin:vaadin-core:24.4.6'
 }
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+}
