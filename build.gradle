@@ -2,6 +2,7 @@ plugins {
 	id 'java-library'
 	id 'com.vaadin' version '24.4.6'
 	id 'eclipse'
+	id 'maven-publish'
 }
 
 sourceSets {
@@ -31,7 +32,14 @@ java {
     withSourcesJar()
 }
 
+compileJava {
+	dependsOn("vaadinPrepareFrontend")
+}
+
+sourcesJar {
+	dependsOn("vaadinPrepareFrontend")
+}
+
 dependencies {
 	api 'com.vaadin:vaadin-core:24.4.6'
 }
-
