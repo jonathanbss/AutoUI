@@ -3,3 +3,4 @@ jdk:
 
 gradle:
   version: 8.8.0
+  wrapper: true
