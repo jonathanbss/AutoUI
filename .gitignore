@@ -27,8 +27,7 @@ replay_pid*
 .settings
 .classpath
 
-/gradle/**/*
-!/gradle/wrapper/gradle-wrapper.properties
+!/gradle/wrapper/gradle-wrapper.jar
 
 /bin/**/*
 /src/main/frontend/**/*
